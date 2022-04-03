@@ -26,14 +26,17 @@ public class Main {
 			int part4 = Integer.parseInt(parts[3]);
 			controller.addToLinkedList(part1, part2, part3, part4);
 			System.out.println(controller.printBuildingInfo());			
-			
 			if(part4 <= 1) {
 				System.out.println("");
 				System.out.println("ERROR: the number of floor must be greater than one");
 				break;
 			}
 			
-			for(int n = 0; n < part2; n++) {
+			for(int i = 0; i < part2; i++) {
+				String [] parts2 = input.split(" ");
+				String name = parts2[0];
+				int floor = Integer.parseInt(parts2[1]);
+				int office = Integer.parseInt(parts2[2]);
 				
 			}	
 			
