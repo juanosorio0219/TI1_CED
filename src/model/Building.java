@@ -20,20 +20,28 @@ public class Building {
 		return id;
 	}
 
-
 	public void setId(String id) {
 		this.id = id;
 	}
-
 
 	public int getFloors() {
 		return floors;
 	}
 
-
 	public void setFloors(int floors) {
 		this.floors = floors;
 	}
+
+
+	public int getOffice() {
+		return office;
+	}
+
+
+	public void setOffice(int office) {
+		this.office = office;
+	}
+	
 	
 	
 	
