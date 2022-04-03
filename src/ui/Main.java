@@ -22,6 +22,8 @@ public class Main {
 			
 			System.out.println("Write the number of offices per floor (Building " + idBuilding + ")");
 			int numOffices = LECTOR.nextInt();
+			
+			//ADD TO LINKTEDLIST
 		}
 	}
 }
