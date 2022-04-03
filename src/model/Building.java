@@ -1,18 +1,18 @@
 package model;
 
+
 public class Building {
 
 	private String id;
+	private int numberOfPeople;
 	private int floors;
-	private int office;
+	private int offices;
 	
 	
-	public Building(String id, int floors, int office) {
+	public Building(String id, int floors, int offices) {
 		this.id = id;
 		this.floors = floors;
-		this.office = office;
-		
-		
+		this.offices = offices;	
 	}
 
 
@@ -33,16 +33,14 @@ public class Building {
 	}
 
 
-	public int getOffice() {
-		return office;
+	public int getOffices() {
+		return offices;
 	}
 
 
-	public void setOffice(int office) {
-		this.office = office;
+	public void setOffice(int offices) {
+		this.offices = offices;
 	}
-	
-	
 	
 	
 }
