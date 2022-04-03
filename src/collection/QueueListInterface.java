@@ -1,6 +1,6 @@
 package collection;
 
-public interface OwnQueueList<E> {
+public interface QueueListInterface<E> {
 	
 	public Node<E> front();
 
