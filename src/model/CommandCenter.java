@@ -11,7 +11,7 @@ public class CommandCenter {
 	
 	
 	public CommandCenter() {
-		building = new Building(null, 0, 0);
+		building = new Building(null, 0, 0, 0);
 		elevator = new Elevator();
 		person = new Person(null, null);
 		
@@ -26,8 +26,8 @@ public class CommandCenter {
 		this.buildingsList = buildingsList;
 	}
 	
-	public void addToLinktedList(String id, int floors, int offices) {
-		building = new Building(id, floors, offices);
+	public void addToLinktedList(String id,int people, int floors, int offices) {
+		building = new Building(id, people, floors, offices);
 		buildingsList.add(building);
 	}
 
