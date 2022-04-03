@@ -7,7 +7,7 @@ public class Building {
 	private int office;
 	
 	
-	public void Building(String id, int floors, int office) {
+	public Building(String id, int floors, int office) {
 		this.id = id;
 		this.floors = floors;
 		this.office = office;
