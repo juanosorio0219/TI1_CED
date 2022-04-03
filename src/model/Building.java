@@ -7,12 +7,16 @@ public class Building {
 	private int floors;
 	private int offices;
 	
+	private Building next;
+	private Building prev;
 	
+
 	public Building(String id, int people, int floors, int offices) {
 		this.id = id;
 		this.people = people;
 		this.floors = floors;
 		this.offices = offices;	
+
 	}
 
 
@@ -23,7 +27,7 @@ public class Building {
 	public void setId(String id) {
 		this.id = id;
 	}
-
+	
 	public int getFloors() {
 		return floors;
 	}
@@ -50,5 +54,26 @@ public class Building {
 	public void setPeople(int people) {
 		this.people = people;
 	}
+
+	public Building getNext() {
+		return next;
+	}
+
+
+	public void setNext(Building next) {
+		this.next = next;
+	}
+
+
+	public Building getPrev() {
+		return prev;
+	}
+
+
+	public void setPrev(Building prev) {
+		this.prev = prev;
+	}
+	
+	
 
 }

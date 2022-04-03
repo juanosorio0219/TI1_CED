@@ -3,6 +3,8 @@ package model;
 import collection.LinkedList;
 
 public class CommandCenter {
+	
+	private LinkedList<Building> buildings;
 	private Building building;
 	private Elevator elevator;
 	private Person person;
@@ -26,8 +28,8 @@ public class CommandCenter {
 		this.buildingsList = buildingsList;
 	}
 	
-	public void addToLinktedList(String id,int people, int floors, int offices) {
-		building = new Building(id, people, floors, offices);
+	public void addToLinkedList(String id, int floors, int people, int offices) {
+		building = new Building(id, floors, people, offices);
 		buildingsList.add(building);
 	}
 
@@ -42,5 +44,6 @@ public class CommandCenter {
 		return info;
 		
 	}
+	
 	
 }
