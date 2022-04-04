@@ -1,24 +1,19 @@
 package model;
 
 public class Person {
-	
+
 	private String name;
-	private int office;
-	
-	
-	public Person(String name, int office) {
+	private int floor;
+	private int officeToGo;
+
+
+	public Person(String name, int floor, int officeToGo) {
 		this.name = name;
-		this.office = office;
+		this.floor = floor;
+		this.officeToGo = officeToGo;
 	}
-	
-	
-	public int getOffice() {
-		return office;
-	}
-	public void setOffice(int office) {
-		this.office = office;
-	}
-	
+
+
 	public String getName() {
 		return name;
 	}
@@ -26,9 +21,18 @@ public class Person {
 		this.name = name;
 	}
 	
-	@Override
-    public String toString() {
-        return "Person [name=" + name + ", office=" + office + "]";
-    }
+	public int getFloor() {
+		return floor;
+	}
+	public void setFloor(int floor) {
+		this.floor = floor;
+	}
+	
+	public int getOfficeToGo() {
+		return officeToGo;
+	}
+	public void setOfficeToGo(int officeToGo) {
+		this.officeToGo = officeToGo;
+	}
 
 }

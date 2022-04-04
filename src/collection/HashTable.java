@@ -2,7 +2,6 @@ package collection;
 
 import java.util.Objects;
 
-
 public class HashTable<K, V> implements HashTableInterface<K, V> {
 
     private HashNodeToMap<?, ?>[] table;
@@ -27,28 +26,32 @@ public class HashTable<K, V> implements HashTableInterface<K, V> {
 	   
 
 	@Override
-	public int put(K key, V value) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+	public int put(K key, V value) throws Exception { //add
+
+		for(int m = 0; m != arraySize; m++) {
+			int index = hash(key, m);
+
+			if (table[index] == null) {
+				table[index] = new HashNodeToMap<>(key, value);
+				size++;
+				return index;
+			}
+		}
+		return -1;
+
 	}
 
 
-	@Override
+	/*@Override
 	public Object search(K key) {
 		// TODO Auto-generated method stub
 		return null;
-	}
+	}*/
 
-	@Override
-	public void delete(K key) throws Exception {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return size;
 	}
 
 }

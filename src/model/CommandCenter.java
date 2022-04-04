@@ -3,20 +3,31 @@ import collection.*;
 
 public class CommandCenter {
 	
-	private LinkedList<Building> buildings;
 	private Building building;
 	private Elevator elevator;
 	private Person person;
 	
 	private LinkedList<Building> buildingsList;
-
+	private QueueList<Person> peopleQueueList;
+	private StackList<Person> peopleStackList;
+	
+	
+	
+	/*private static BufferedReader br;
+    private static Edifice[] edifice;
+    private static Queue<Person> personQueue;
+    private static PersonPriorityQueue<Person> personPriorityQueue;
+    private static Stack<Person> personStack;*/
+	
 	
 	public CommandCenter() {
 		building = new Building(null, 0, 0, 0);
 		elevator = new Elevator();
-		person = new Person(null, 0);
+		person = new Person(null, 0, 0);
 		
 		buildingsList = new LinkedList<>();
+		peopleQueueList = new QueueList<>();
+		peopleStackList = new StackList<>();
 	}
 
 	
@@ -35,26 +46,14 @@ public class CommandCenter {
 		
 		return info;
 		
-	}
+	}	
 
-	
-	public String printHashMapInfo() {
-		String info = "";
-		
-		
-		
-		return info;
+	public void addToQueueLis(String name, int floor, int officeToGo) {
+		person = new Person(name, floor, officeToGo);
+		peopleQueueList.enqueue(person);
 	}
 	
-
-	public LinkedList<Building> getBuildings() {
-		return buildings;
-	}
-	public void setBuildings(LinkedList<Building> buildings) {
-		this.buildings = buildings;
-	}
-
-
+	
 	public Person getPerson() {
 		return person;
 	}

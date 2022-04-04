@@ -36,20 +36,20 @@ public class QueueList<E> implements QueueListInterface<E> {
 	@Override
 	public Node<E> dequeue() {
 		if (front != null) {
-            
-			Node<E> dequeueNode = front;
-            
-            if(front.getNext() == null) {
-                front = null;
-            } else {
-                front = front.getNext();
-            }
 
-            return dequeueNode;
-            
-        } else {
-            return null;
-        }
+			Node<E> dequeueNode = front;
+
+			if(front.getNext() == null) {
+				front = null;
+			} else {
+				front = front.getNext();
+			}
+
+			return dequeueNode;
+
+		} else {
+			return null;
+		}
 	}
-	
+
 }

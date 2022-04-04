@@ -6,9 +6,7 @@ public interface HashTableInterface<K, V> {
     
     public int put(K key, V value) throws Exception;
 
-    public Object search(K key);
-    
-    public void delete(K key) throws Exception;
+    //public Object search(K key);
 
     public int size();
 }
