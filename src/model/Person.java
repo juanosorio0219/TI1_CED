@@ -3,19 +3,19 @@ package model;
 public class Person {
 	
 	private String name;
-	private String office;
+	private int office;
 	
 	
-	public Person(String name, String office) {
+	public Person(String name, int office) {
 		this.name = name;
 		this.office = office;
 	}
 	
 	
-	public String getOffice() {
+	public int getOffice() {
 		return office;
 	}
-	public void setOffice(String office) {
+	public void setOffice(int office) {
 		this.office = office;
 	}
 	
@@ -26,5 +26,9 @@ public class Person {
 		this.name = name;
 	}
 	
+	@Override
+    public String toString() {
+        return "Person [name=" + name + ", office=" + office + "]";
+    }
 
 }
