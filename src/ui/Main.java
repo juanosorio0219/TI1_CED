@@ -52,6 +52,7 @@ public class Main {
 				int office = Integer.parseInt(parts2[2]);
 				
 				controller.addToQueueLis(name, floor, office);
+				controller.addToPriorityQueue();
 			}	
 		}		
 	}

@@ -28,6 +28,7 @@ public class CommandCenter {
 		buildingsList = new LinkedList<>();
 		peopleQueueList = new QueueList<>();
 		peopleStackList = new StackList<>();
+		
 	}
 
 	
@@ -53,6 +54,10 @@ public class CommandCenter {
 		peopleQueueList.enqueue(person);
 	}
 	
+	public void addToPriorityQueue() {
+		elevator.getPeoplePQ().offer(peopleQueueList.dequeue());
+	}
+	
 	
 	public Person getPerson() {
 		return person;
@@ -60,6 +65,9 @@ public class CommandCenter {
 	public void setPerson(Person person) {
 		this.person = person;
 	}
+
+
+	
 	
 	
 }
