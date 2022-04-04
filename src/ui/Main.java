@@ -13,6 +13,17 @@ public class Main {
 	
 	public static void main(String[] args) throws IOException {
 	
+		System.out.println("*****************************");
+		System.out.println("*    TAREA INTEGRADORA 1    *");
+		System.out.println("*                           *");
+		System.out.println("* - Carlos Villegas         *");
+		System.out.println("* - Juan José Osorio        *");
+		System.out.println("*****************************");
+		System.out.println("");
+
+		
+		System.out.println("Enter the test cases");
+		
 		String numB = br.readLine();	
 		int numBuildings = Integer.parseInt(numB);
 		for(int m = 0; m < numBuildings; m++) {

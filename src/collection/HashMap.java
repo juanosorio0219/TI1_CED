@@ -1,4 +1,4 @@
-package collection;
+	package collection;
 
 public class HashMap<K, V> {
 	
