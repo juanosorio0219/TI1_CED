@@ -9,7 +9,7 @@ public class CommandCenter {
 	private Person person;
 	
 	private LinkedList<Building> buildingsList;
-	private HashMap<Person, Integer> hashBuilding;
+
 	
 	public CommandCenter() {
 		building = new Building(null, 0, 0, 0);
@@ -17,7 +17,6 @@ public class CommandCenter {
 		person = new Person(null, 0);
 		
 		buildingsList = new LinkedList<>();
-		hashBuilding = new HashMap<Person, Integer>();
 	}
 
 	
@@ -38,11 +37,6 @@ public class CommandCenter {
 		
 	}
 
-	
-	public void addToMap(String name, int office) {
-		Person persona = new Person(name, office);
-		hashBuilding.put(persona, persona.getOffice());
-	}
 	
 	public String printHashMapInfo() {
 		String info = "";

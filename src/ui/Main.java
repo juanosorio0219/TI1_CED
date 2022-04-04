@@ -50,7 +50,7 @@ public class Main {
 				String name = parts2[0];
 				int floor = Integer.parseInt(parts2[1]);
 				int office = Integer.parseInt(parts2[2]);
-				controller.addToMap(name, office);
+			
 			}	
 		}		
 	}
