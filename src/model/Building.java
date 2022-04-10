@@ -1,34 +1,28 @@
 package model;
 
-import collection.HashTable;
 
 public class Building {
 
-	private String id;
-	private int people;
+	private char id;
 	private int floors;
 	private int offices;
+	private HashTable<Integer, Person> list;
 	
-	private HashTable<Integer, Person> oficinas;
-	
-	private Building next;
-	private Building prev;
-	
-
-	public Building(String id, int people, int floors, int offices) {
-		this.id = id;
-		this.people = people;
+	public Building(char c, int floors, int offices) {
+		this.id = c;		
 		this.floors = floors;
-		this.offices = offices;	
-		
-		setOficinas(new HashTable<>(this.floors * this.offices));
+		this.offices = offices*floors;	
+		list = new HashTable<>(this.offices);
+
+
 	}
 
 
-	public String getId() {
+	public char getId() {
 		return id;
 	}
-	public void setId(String id) {
+
+	public void setId(char id) {
 		this.id = id;
 	}
 	
@@ -45,35 +39,11 @@ public class Building {
 	public void setOffice(int offices) {
 		this.offices = offices;
 	}
+	
+	public HashTable<Integer, Person> getList() {
+        return list;
+    }
 
-	public int getPeople() {
-		return people;
-	}
-	public void setPeople(int people) {
-		this.people = people;
-	}
-
-	public Building getNext() {
-		return next;
-	}
-	public void setNext(Building next) {
-		this.next = next;
-	}
-
-	public Building getPrev() {
-		return prev;
-	}
-	public void setPrev(Building prev) {
-		this.prev = prev;
-	}
-
-
-	public HashTable<Integer, Person> getOficinas() {
-		return oficinas;
-	}
-	public void setOficinas(HashTable<Integer, Person> oficinas) {
-		this.oficinas = oficinas;
-	}
 	
 	
 

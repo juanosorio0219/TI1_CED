@@ -3,14 +3,20 @@ package model;
 public class Person {
 
 	private String name;
-	private int floor;
-	private int officeToGo;
-
-
-	public Person(String name, int floor, int officeToGo) {
+	private int position;
+	private int office;
+	
+	
+	
+	public Person(String name, int position, int office) {
 		this.name = name;
-		this.floor = floor;
-		this.officeToGo = officeToGo;
+		this.position = position;
+		this.office = office;
+	}
+	
+	
+	public int getOffice() {
+		return office;
 	}
 
 
@@ -21,18 +27,12 @@ public class Person {
 		this.name = name;
 	}
 	
-	public int getFloor() {
-		return floor;
+	public int getPosition() {
+		return position;
 	}
-	public void setFloor(int floor) {
-		this.floor = floor;
-	}
-	
-	public int getOfficeToGo() {
-		return officeToGo;
-	}
-	public void setOfficeToGo(int officeToGo) {
-		this.officeToGo = officeToGo;
-	}
+
+	public void setPosition(int position) {
+		this.position = position;
+	}	
 
 }
